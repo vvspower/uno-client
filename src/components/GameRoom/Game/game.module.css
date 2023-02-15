@@ -1,0 +1,118 @@
+.middle {
+  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 40%;
+  position: fixed;
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  margin-right: 200px;
+}
+
+.deck p {
+  color: white;
+  font-size: 40px;
+  padding: 40px 10px;
+  border-radius: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  background-color: yellow;
+}
+
+.active_cards p {
+  color: white;
+  font-size: 40px;
+  padding: 40px 10px;
+  border-radius: 10px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  background-color: yellow;
+}
+
+.card {
+  text-align: center;
+  margin: 0px;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  margin: 5px;
+  margin-bottom: 10px;
+  /* position: absolute; */
+
+  /* float: left; */
+}
+
+.card:hover {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+}
+
+.card p {
+  margin: 0px;
+  font-size: 60px;
+  padding: 20px 40px;
+  color: white;
+
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+}
+
+.cards {
+  display: flex;
+  position: relative;
+  transition: 0.3s;
+
+  /* justify-content: center; */
+  gap: 10px;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  vertical-align: bottom;
+  max-width: 1000px;
+}
+
+.player {
+  /* position: absolute; */
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.opponents {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  gap: 100px;
+}
+
+.opponent_player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.opponent_player span {
+  max-width: 100px;
+  text-align: center;
+}
+
+.opponent_player p {
+  position: relative;
+  background-color: black;
+  padding: 30px 15px;
+  color: white;
+  border-radius: 10px;
+}

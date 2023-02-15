@@ -5,8 +5,9 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NavBar from "./components/navbar/NavBar";
-import PlayersOnline from "./components/PlayersOnline/PlayersOnline";
-import GameRoom from "./components/GameRoom/GameRoom";
+import PlayersOnline from "./components/HomePage/PlayersOnline/PlayersOnline";
+import Lobby from "./components/GameRoom/Lobby";
+import State from "./components/Context/State";
 
 const router = createBrowserRouter([
   {
@@ -15,15 +16,17 @@ const router = createBrowserRouter([
   },
   {
     path: "/room/:id",
-    element: <GameRoom />,
+    element: <Lobby />,
   },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <NavBar />
-    <RouterProvider router={router} />
+    <State>
+      <NavBar />
+      <RouterProvider router={router} />
+    </State>
   </>
 );
 
